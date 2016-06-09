@@ -4,7 +4,7 @@ set sw=2
 set nu
 syntax on
 filetype indent plugin on
-colorscheme grb256
+colorscheme railscasts
 
 map <F5> :set nowrap! <CR>
 map <F4> :set hlsearch! hlsearch? <CR>
@@ -23,3 +23,10 @@ map <c-h> <c-w>h
 " easier moving of code blocks
 vnoremap < <gv
 vnoremap > >gv
+
+" Undo
+set hidden
+set undodir=~/.vim/undo
+set undofile
+set undolevels=1000
+set undoreload=10000
