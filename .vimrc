@@ -4,7 +4,7 @@ set sw=2
 set nu
 syntax on
 filetype indent plugin on
-colorscheme railscasts
+colorscheme grb256
 
 map <F5> :set nowrap! <CR>
 map <F4> :set hlsearch! hlsearch? <CR>
