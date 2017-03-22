@@ -2,6 +2,7 @@ set expandtab
 set tabstop=2
 set sw=2
 set nu
+set nowrap
 syntax on
 filetype indent plugin on
 colorscheme grb256
