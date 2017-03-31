@@ -2,6 +2,7 @@ set expandtab
 set tabstop=2
 set sw=2
 set nu
+set ruler
 set nowrap
 syntax on
 filetype indent plugin on
@@ -9,6 +10,7 @@ colorscheme grb256
 
 map <F5> :set nowrap! <CR>
 map <F4> :set hlsearch! hlsearch? <CR>
+map <F9> :! carlos sync <CR><CR>
 
 " Map save
 nmap <c-s> :w<CR>
