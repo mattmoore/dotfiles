@@ -4,6 +4,7 @@ set sw=2
 set nu
 set ruler
 set nowrap
+set mouse=a
 syntax on
 filetype indent plugin on
 colorscheme grb256
