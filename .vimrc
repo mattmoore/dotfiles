@@ -5,6 +5,9 @@ set nu
 set ruler
 set nowrap
 set mouse=a
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+set paste
+
 syntax on
 filetype indent plugin on
 colorscheme grb256
