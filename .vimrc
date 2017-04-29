@@ -6,6 +6,7 @@ set ruler
 set nowrap
 set mouse=a
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+set encoding=utf-8
 
 syntax on
 filetype indent plugin on
@@ -39,3 +40,9 @@ set undoreload=10000
 
 " Swap
 set directory=$HOME/.vim/swapfiles//
+
+" Powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+set laststatus=2
