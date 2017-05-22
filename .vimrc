@@ -1,5 +1,6 @@
 set expandtab
 set tabstop=2
+set backspace=2
 set sw=2
 set nu
 set ruler
