@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 set expandtab
 set tabstop=2
 set backspace=2
@@ -41,9 +43,3 @@ set undoreload=10000
 
 " Swap
 set directory=$HOME/.vim/swapfiles//
-
-" Powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-set laststatus=2
