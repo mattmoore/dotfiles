@@ -1,4 +1,5 @@
 execute pathogen#infect()
+let g:airline_powerline_fonts = 1
 
 set expandtab
 set tabstop=2
