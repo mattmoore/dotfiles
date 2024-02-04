@@ -8,6 +8,8 @@ vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 vim.opt.mouse = 'a'
 vim.opt.termguicolors = true
+vim.keymap.set('v', '<', '<gv', { remap = false })
+vim.keymap.set('v', '>', '>gv', { remap = false })
 -- vim.opt.guifont = "DejaVu Sans Mono for Powerline"
 -- vim.opt.guifont = "Source Code Pro:h12:#h-slight"
 
