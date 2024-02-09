@@ -2,3 +2,4 @@
 .vim/swapfiles
 .vim/autoload/
 .vim/bundle/
+.config/nvim/lazy-lock.json
