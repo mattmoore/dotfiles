@@ -64,7 +64,7 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 -- Standard:
 --vim.api.nvim_set_keymap("n", "<space>fb", ":Telescope file_browser<CR>", { noremap = true })
 -- Open file_browser with the path of the current buffer:
-vim.api.nvim_set_keymap("n", "<space>.", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<space>.", ":Telescope file_browser path=%:p:h select_buffer=true hidden=true<CR>", { noremap = true })
 -- Buffer navigation
 vim.api.nvim_set_keymap("n", "gt", ":bn<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "gT", ":bp<CR>", { noremap = true })
