@@ -140,7 +140,8 @@ nvimMetals = {
         map("n", "<leader>sh", vim.lsp.buf.signature_help)
         map("n", "<leader>rn", vim.lsp.buf.rename)
         map("n", "<leader>f", vim.lsp.buf.format)
-        map("n", "<leader>ca", vim.lsp.buf.code_action)
+        -- map("n", "<leader>ca", vim.lsp.buf.code_action)
+        map("n", "<leader>ca", ":CodeActionMenu<CR>")
 
         map("n", "<leader>ws", function()
           require("metals").hover_worksheet()
