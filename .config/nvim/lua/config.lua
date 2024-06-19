@@ -22,8 +22,17 @@ require("lualine").setup {
 
 
 -- Telescope Setup --
-require("telescope").setup()
-require("telescope").load_extension "file_browser"
+require("telescope").load_extension("file_browser")
+--require("telescope").load_extension("media_files")
+require("telescope").setup {
+  extensions = {
+    file_browser = {},
+    media_files = {
+      filetypes = {"png", "webp", "jpg", "jpeg"},
+      find_cmd = "rg"
+    }
+  }
+}
 require("bufferline").setup()
 require("nvim-web-devicons").setup()
 local builtin = require('telescope.builtin')
@@ -65,6 +74,8 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 --vim.api.nvim_set_keymap("n", "<space>fb", ":Telescope file_browser<CR>", { noremap = true })
 -- Open file_browser with the path of the current buffer:
 vim.api.nvim_set_keymap("n", "<space>.", ":Telescope file_browser path=%:p:h select_buffer=true hidden=true<CR>", { noremap = true })
+-- Telescope Media Files
+vim.keymap.set('n', '<leader>fm', ":Telescope media_files<CR>", {})
 -- Buffer navigation
 vim.api.nvim_set_keymap("n", "gt", ":bn<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "gT", ":bp<CR>", { noremap = true })
