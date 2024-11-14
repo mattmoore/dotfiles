@@ -12,13 +12,17 @@ vim.opt.termguicolors = true
 
 
 -- Theming --
-vim.cmd("colorscheme aura-dark")
+--vim.cmd("colorscheme aura-dark")
+--vim.cmd("colorscheme catppuccin-mocha")
+--vim.cmd("colorscheme carbonfox")
+vim.cmd("colorscheme tokyonight-night")
 local tokyonight = require("lualine.themes.tokyonight")
 require("lualine").setup {
   options = {
     theme = tokyonight
   }
 }
+vim.cmd("hi normal guibg=NONE")
 
 
 -- Telescope Setup --
