@@ -1,0 +1,131 @@
+{
+  "custom/appmenu": {
+    "format": "APPS",
+    "on-click": "rofi -show drun",
+  },
+  "hyprland/workspaces": {
+    "on-scroll-up": "hyprctl dispatch workspace r-1",
+    "on-scroll-down": "hyprctl dispatch workspace r+1",
+    "persistent-workspaces": {
+      "*": 5,
+    }
+  },
+  "custom/quicklink_terminal": {
+    "format": "λ",
+    "on-click": "kitty",
+    "tooltip-format": "Terminal",
+  },
+  "custom/quicklink_browser": {
+    "format": "🌊",
+    "on-click": "flatpak run app.zen_browser.zen",
+    "tooltip-format": "Browser",
+  },
+  "custom/quicklink_plex": {
+    "format": "🎞️",
+    "on-click": "flatpak run --env=QT_QPA_PLATFORM=xcb tv.plex.PlexDesktop",
+    "tooltip-format": "Plex",
+  },
+  "custom/quicklink_vm": {
+    "format": "🖧",
+    "on-click": "virt-manager",
+    "tooltip-format": "Virtual Machine Manager",
+  },
+  "custom/quicklink_filemanager": {
+    "format": "📁",
+    "on-click": "thunar",
+    "tooltip-format": "File Manager",
+  },
+  "custom/quicklink_steam": {
+    "format": "🎮",
+    "on-click": "steam",
+    "tooltip-format": "Steam",
+  },
+  "group/quicklinks": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/quicklink_terminal",
+      "custom/quicklink_filemanager",
+      "custom/quicklink_browser",
+      "custom/quicklink_plex",
+      "custom/quicklink_vm",
+      "custom/quicklink_steam",
+    ]
+  },
+  "custom/updates": {
+    "format": "  {}",
+    "escape": true,
+    "return-type": "json",
+    "exec": "~/.config/ml4w/scripts/updates.sh",
+    "interval": 1800,
+    "signal": 1,
+    "hide-empty-text": true,
+    "on-click": "~/.config/ml4w/settings/installupdates.sh",
+  },
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol -t 3",
+  },
+  "network": {
+    "on-click": "nm-connection-editor",
+  },
+  "bluetooth": {
+    "on-click": "blueman-manager",
+  },
+  "tray": {
+    "icon-size": 20,
+    "spacing": 10,
+  },
+  "custom/wallpaper": {
+    "format": "🌄",
+    "on-click": "waypaper",
+    "tooltip-format": "Wallpaper",
+  },
+  "clock": {
+      "format": "{:%A  %m/%d/%Y  %B  %I:%M %p}",
+      "tooltip-format": "<big>{:%Y %B \t week: %V }</big>\n<tt>{calendar}</tt>",
+  },
+  "custom/power": {
+    "format": " ⏻ ",
+    "on-click": "wlogout",
+    "tooltip-format": "Power Menu",
+  },
+  "custom/notification": {
+    "tooltip-format": "Left: Notifications\nRight: Do not disturb",
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "🔔",
+      "none": "🔔",
+      "dnd-notification": "🔕",
+      "dnd-none": "🔕",
+      "inhibited-notification": "notification_important",
+      "inhibited-none": "notification_important",
+      "dnd-inhibited-notification": "notification_off",
+      "dnd-inhibited-none": "notifications_off"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+}

@@ -1,0 +1,42 @@
+{
+    "include": [
+      "~/.config/waybar/modules.json",
+    ],
+    // General Settings
+    "layer": "top",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 0,
+    // Modules Left
+    "modules-left": [
+        "custom/appmenu",
+        "hyprland/workspaces",
+        //"group/links",
+        //"wlr/taskbar",
+        "group/quicklinks",
+        "custom/empty"
+    ],
+    // Modules Center
+    "modules-center": [
+        "hyprland/window",
+        "custom/empty"
+    ],
+    // Modules Right    
+    "modules-right": [
+        "custom/updates",
+        "pulseaudio",
+        //"backlight",
+        "bluetooth",
+        "network",
+        "battery",
+        "group/hardware",
+        "group/tools",
+        "tray",
+        "custom/wallpaper",
+        "custom/notification",
+        "clock",
+        "custom/power",
+    ],
+}
