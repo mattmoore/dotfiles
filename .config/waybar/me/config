@@ -34,6 +34,7 @@
         "group/hardware",
         "group/tools",
         "tray",
+        "custom/cliphist",
         "custom/wallpaper",
         "custom/notification",
         "clock",

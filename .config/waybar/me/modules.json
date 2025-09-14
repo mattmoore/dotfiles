@@ -59,7 +59,7 @@
     "interval": 1800,
     "signal": 1,
     "hide-empty-text": true,
-    "on-click": "~/.config/ml4w/settings/installupdates.sh",
+    "on-click": "kitty --class dotfiles-floating ~/.config/ml4w/scripts/installupdates.sh",
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -93,6 +93,13 @@
   "tray": {
     "icon-size": 20,
     "spacing": 10,
+  },
+  "custom/cliphist": {
+    "format": "📋",
+    "on-click": "~/.config/hypr/scripts/cliphist.sh",
+    "on-click-right": "~/.config/hypr/scripts/cliphist.sh d",
+    "on-click-middle": "~/.config/hypr/scripts/cliphist.sh w",
+    "tooltip-format": "Left: Open clipboard Manager\nRight: Delete an entry\nMiddle: Clear list",
   },
   "custom/wallpaper": {
     "format": "🌄",
